@@ -2,7 +2,7 @@
 
 ## Rationale for Using Node.js/TypeScript
 
-Node.js, especially with TypeScript, is highly suitable for this challenge due to its inherent strengths in handling asynchronous, I/O-bound operations and real-time communication. Its event-driven, non-blocking architecture is exceptionally well-suited for WebSocket servers that need to manage multiple concurrent client connections efficiently, as required by the server. Furthermore, Node.js has excellent and mature libraries for WebSockets (e.g., `ws`, `socket.io`) and making HTTP requests to external APIs, simplifying the implementation of both the server and the client's translation functionality. The use of TypeScript enhances code quality, maintainability, and readability, aligning with the submission guidelines.
+Node.js, especially with TypeScript, is highly suitable for this challenge due to its inherent strengths in handling asynchronous, I/O-bound operations and real-time communication. Its event-driven, non-blocking architecture is very much well-suited for WebSocket servers that need to manage multiple concurrent client connections efficiently, as required by the server. Also, Node.js has excellent and mature libraries for WebSockets (e.g., `ws`, `socket.io`)
 
 ## Implementation Overview
 
