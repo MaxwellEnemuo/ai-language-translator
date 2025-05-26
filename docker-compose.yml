@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  # WebSocket Server
+  server:
+    build: .
+    container_name: ai-tutor-server
+    ports:
+      - "8080:8080"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - NODE_ENV=development
+      - FORCE_COLOR=1
+    command: ["yarn", "start:server"]
+    tty: true
+    restart: unless-stopped
+    networks:
+      - ai-tutor-network
+
+  # WebSocket Client
+  client:
+    build: .
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - SERVER_URL=ws://server:8080
+      - NODE_ENV=development
+      - FORCE_COLOR=1
+    command: ["yarn", "start:client"]
+    tty: true
+    depends_on:
+      - server
+    restart: "no"
+    networks:
+      - ai-tutor-network
+
+networks:
+  ai-tutor-network:
+    driver: bridge

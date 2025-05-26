@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSocket Server Status</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="stats-container">
+      <h1>WebSocket Server Status</h1>
+      <h2>Overall Statistics</h2>
+      <div class="stats-section">
+        <div class="stats-item">
+          <h3>Total Jokes Sent</h3>
+          <p id="total-jokes">0</p>
+        </div>
+        <div class="stats-item">
+          <h3>Total Translations Received</h3>
+          <p id="total-translations">0</p>
+        </div>
+        <div class="stats-item">
+          <h3>Current Active Connections</h3>
+          <p id="active-connections">0</p>
+        </div>
+        <div class="stats-item">
+          <h3>Average Translation Time (ms)</h3>
+          <p id="avg-time">0.00</p>
+        </div>
+      </div>
+
+      <h2>Client Connections (<span id="client-count">0</span>)</h2>
+      <div class="table-container">
+        <table id="client-connections-table">
+          <thead>
+            <tr>
+              <th>Client ID</th>
+              <th>Status</th>
+              <th>Jokes Sent</th>
+              <th>Translations Received</th>
+              <th>Avg. Translation Time (ms)</th>
+              <th>Connected At</th>
+              <th>Disconnected At</th>
+            </tr>
+          </thead>
+          <tbody id="client-connections-tbody">
+            <tr>
+              <td colspan="7" class="no-data">No clients connected yet</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="/js/ui-client.js"></script>
+  </body>
+</html>
