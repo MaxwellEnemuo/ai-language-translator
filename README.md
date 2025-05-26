@@ -81,52 +81,6 @@ docker compose up --build
 
 This will start both the server and client in the same terminal window with combined logs.
 
-## Alternative: Run with Yarn (Local Development)
-
-If you prefer to run without Docker:
-
-### Prerequisites
-
-* Node.js 18.x or higher
-* Yarn package manager
-
-### Setup and Run
-
-1. **Install dependencies:**
-
-   ```bash
-   yarn install
-   ```
-
-2. **Set up environment variables:**
-
-   ```bash
-   cp .env.example .env
-   ```
-
-   Edit the `.env` file and add your `GEMINI_API_KEY`.
-
-3. **Build the project:**
-
-   ```bash
-   yarn build
-   ```
-
-4. **Run the application:**
-
-   **Option 1: Run Server and Client Together:**
-
-   ```bash
-   yarn start
-   ```
-
-   **Option 2: Run Server and Client Separately:**
-
-   ```bash
-   yarn start:server    # Terminal 1
-   yarn start:client    # Terminal 2
-   ```
-
 ## External APIs Used
 
 * **Google Gemini API:** Used by the Client to translate jokes into German. Specifically, the `gemini-2.0-flash` model is used by default.
