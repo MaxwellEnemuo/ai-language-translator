@@ -56,7 +56,7 @@ This project implements a real-time WebSocket-based joke translation system that
 **Start the Server (Terminal 1):**
 
 ```bash
-docker compose run --rm server (Do not run multiple instances of the container)
+docker compose run --rm server
 ```
 
 **Start the Client (Terminal 2) Multiple client instances can be started:**
