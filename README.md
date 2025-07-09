@@ -1,4 +1,4 @@
-# AI Tutor
+# AI Language Translator
 
 ### Technical Implementation
 
